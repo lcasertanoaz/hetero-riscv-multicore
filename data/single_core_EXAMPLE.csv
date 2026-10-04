@@ -1,0 +1,7 @@
+task,rocket_cycles,boom_cycles
+dhrystone,400000,180000
+qsort,520000,260000
+vvadd,300000,240000
+spmv,610000,500000
+median,350000,200000
+towers,280000,150000
