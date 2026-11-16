@@ -1,0 +1,10 @@
+[UART] UART0 is here (stdin/stdout).
+cycles        344519
+instret       194364
+branches      45947
+br_mispred    10087
+icache_miss   70
+dcache_miss   1771
+checksum      302075839
+hpm_test done
+- /workspace/chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.BudgetR1Config/gen-collateral/TestDriver.v:158: Verilog $finish
