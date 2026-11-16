@@ -14,8 +14,9 @@
 # Writes results/synth/<label>/ (utilization reports, log) and appends a row to
 # data/tile_area.csv: config,top,part,luts,ffs,bram_tiles,dsps
 #
-# Files that use DPI-C or are simulation-only (TestHarness, Sim*) are skipped:
-# the tile does not use them and Vivado cannot parse DPI.
+# Files that use DPI-C or bind, or are simulation-only (TestHarness, Sim*,
+# ClockSource*, layers*) are skipped. Everything else is read as SystemVerilog,
+# since some .v files contain SystemVerilog. The tile uses none of the skipped files.
 
 if {[llength $argv] < 3} {
     puts "usage: -tclargs <verilog_dir> <top_module> <label> \[part\]"
@@ -35,12 +36,18 @@ set skipped {}
 foreach f [lsort [concat [glob -nocomplain -directory $src_dir *.sv] \
                          [glob -nocomplain -directory $src_dir *.v]]] {
     set name [file tail $f]
-    if {[string match "TestHarness*" $name] || [string match "Sim*" $name]} {
+    # Simulation-only files: harness, simulated devices, clock sources, bind layers
+    set sim_only 0
+    foreach pat {TestHarness* TestDriver* Sim* ClockSource* layers* *_bind* *Verification*} {
+        if {[string match $pat $name]} { set sim_only 1 }
+    }
+    if {$sim_only} { lappend skipped $name; continue }
+    set fh [open $f r]; set body [read $fh]; close $fh
+    if {[string first "DPI-C" $body] >= 0 || [regexp -line {^\s*bind\s} $body]} {
         lappend skipped $name; continue
     }
-    set fh [open $f r]; set body [read $fh]; close $fh
-    if {[string first "DPI-C" $body] >= 0} { lappend skipped $name; continue }
-    if {[string match "*.sv" $name]} { read_verilog -sv $f } else { read_verilog $f }
+    # Chipyard emits SystemVerilog even in some .v files, so read everything as SV
+    read_verilog -sv $f
     incr n_read
 }
 puts "Read $n_read files; skipped [llength $skipped]: $skipped"

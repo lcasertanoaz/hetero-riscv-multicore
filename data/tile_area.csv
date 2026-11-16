@@ -1,0 +1,4 @@
+config,top,part,luts,ffs,bram_tiles,dsps
+BudgetR1Config,RocketTile,xc7a200tsbg484-1,29569,13606,88,25
+BudgetSB1Config,BoomTile,xc7a200tsbg484-1,66361,44922,40,64
+BudgetMB1Config,BoomTile,xc7a200tsbg484-1,117628,61863,40,64

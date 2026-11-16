@@ -1,0 +1,126 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Sun Nov 15 23:44:08 2026
+| Host         : DESKTOP-62E1DJV running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -hierarchical_depth 4 -file C:/synth/results/synth/BudgetR1Config/utilization_hier.rpt
+| Design       : RocketTile
+| Device       : xc7a200tsbg484-1
+| Speed File   : -1
+| Design State : Synthesized
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++---------------------------------------------+---------------------------------------------------+------------+------------+---------+------+-------+--------+--------+------------+
+|                   Instance                  |                       Module                      | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs  | RAMB36 | RAMB18 | DSP Blocks |
++---------------------------------------------+---------------------------------------------------+------------+------------+---------+------+-------+--------+--------+------------+
+| RocketTile                                  |                                             (top) |      29569 |      29465 |     104 |    0 | 13606 |      0 |    176 |         25 |
+|   (RocketTile)                              |                                             (top) |          0 |          0 |       0 |    0 |    55 |      0 |      0 |          0 |
+|   core                                      |                                            Rocket |       6634 |       6546 |      88 |    0 |  2298 |      0 |      0 |         13 |
+|     (core)                                  |                                            Rocket |       2270 |       2270 |       0 |    0 |   728 |      0 |      0 |          0 |
+|     csr                                     |                                           CSRFile |       2467 |       2467 |       0 |    0 |  1283 |      0 |      0 |          0 |
+|     div                                     |                                            MulDiv |       1567 |       1567 |       0 |    0 |   214 |      0 |      0 |         13 |
+|     ibuf                                    |                                              IBuf |        194 |        194 |       0 |    0 |    73 |      0 |      0 |          0 |
+|     rf_ext                                  |                                          rf_31x64 |        136 |         48 |      88 |    0 |     0 |      0 |      0 |          0 |
+|   dcache                                    |                                            DCache |       3690 |       3690 |       0 |    0 |  2416 |      0 |    136 |          0 |
+|     (dcache)                                |                                            DCache |       2481 |       2481 |       0 |    0 |  2400 |      0 |      0 |          0 |
+|     data                                    |                                   DCacheDataArray |        511 |        511 |       0 |    0 |     0 |      0 |    128 |          0 |
+|       rockettile_dcache_data_arrays_0       |                   rockettile_dcache_data_arrays_0 |        268 |        268 |       0 |    0 |     0 |      0 |     64 |          0 |
+|         rockettile_dcache_data_arrays_0_ext |           rockettile_dcache_data_arrays_0_ext_118 |        268 |        268 |       0 |    0 |     0 |      0 |     64 |          0 |
+|       rockettile_dcache_data_arrays_1       |                   rockettile_dcache_data_arrays_1 |        243 |        243 |       0 |    0 |     0 |      0 |     64 |          0 |
+|         rockettile_dcache_data_arrays_0_ext |               rockettile_dcache_data_arrays_0_ext |        243 |        243 |       0 |    0 |     0 |      0 |     64 |          0 |
+|     lfsr_prng                               |                         MaxPeriodFibonacciLFSR_47 |          7 |          7 |       0 |    0 |    16 |      0 |      0 |          0 |
+|     rockettile_dcache_tag_array             |                       rockettile_dcache_tag_array |        691 |        691 |       0 |    0 |     0 |      0 |      8 |          0 |
+|       rockettile_dcache_tag_array_ext       |                   rockettile_dcache_tag_array_ext |        691 |        691 |       0 |    0 |     0 |      0 |      8 |          0 |
+|         mem_0_0                             |             split_rockettile_dcache_tag_array_ext |         38 |         38 |       0 |    0 |     0 |      0 |      1 |          0 |
+|         mem_0_1                             |          split_rockettile_dcache_tag_array_ext_48 |         14 |         14 |       0 |    0 |     0 |      0 |      1 |          0 |
+|         mem_0_2                             |          split_rockettile_dcache_tag_array_ext_49 |         70 |         70 |       0 |    0 |     0 |      0 |      1 |          0 |
+|         mem_0_3                             |          split_rockettile_dcache_tag_array_ext_50 |         59 |         59 |       0 |    0 |     0 |      0 |      1 |          0 |
+|         mem_0_4                             |          split_rockettile_dcache_tag_array_ext_51 |        104 |        104 |       0 |    0 |     0 |      0 |      1 |          0 |
+|         mem_0_5                             |          split_rockettile_dcache_tag_array_ext_52 |        107 |        107 |       0 |    0 |     0 |      0 |      1 |          0 |
+|         mem_0_6                             |          split_rockettile_dcache_tag_array_ext_53 |        151 |        151 |       0 |    0 |     0 |      0 |      1 |          0 |
+|         mem_0_7                             |          split_rockettile_dcache_tag_array_ext_54 |        148 |        148 |       0 |    0 |     0 |      0 |      1 |          0 |
+|   dcacheArb                                 |                                 HellaCacheArbiter |         29 |         29 |       0 |    0 |     2 |      0 |      0 |          0 |
+|   fpuOpt                                    |                                               FPU |      13843 |      13843 |       0 |    0 |  3968 |      0 |      0 |         12 |
+|     (fpuOpt)                                |                                               FPU |         27 |         27 |       0 |    0 |   184 |      0 |      0 |          0 |
+|     dfma                                    |                                 FPUFMAPipe_l4_f64 |       2122 |       2122 |       0 |    0 |   478 |      0 |      0 |          9 |
+|       (dfma)                                |                                 FPUFMAPipe_l4_f64 |         85 |         85 |       0 |    0 |   202 |      0 |      0 |          0 |
+|       fma                                   |                        MulAddRecFNPipe_l2_e11_s53 |       2037 |       2037 |       0 |    0 |   276 |      0 |      0 |          9 |
+|         (fma)                               |                        MulAddRecFNPipe_l2_e11_s53 |       1712 |       1712 |       0 |    0 |   276 |      0 |      0 |          9 |
+|         roundRawFNToRecFN                   |                      RoundRawFNToRecFN_e11_s53_45 |        325 |        325 |       0 |    0 |     0 |      0 |      0 |          0 |
+|     divSqrt                                 |                         DivSqrtRecFM_small_e5_s11 |        188 |        188 |       0 |    0 |    60 |      0 |      0 |          0 |
+|       divSqrtRecFNToRaw                     |                    DivSqrtRecFMToRaw_small_e5_s11 |        188 |        188 |       0 |    0 |    60 |      0 |      0 |          0 |
+|         divSqrtRawFN                        |                         DivSqrtRawFN_small_e5_s11 |        188 |        188 |       0 |    0 |    60 |      0 |      0 |          0 |
+|       roundRawFNToRecFN                     |                       RoundRawFNToRecFN_e5_s11_43 |          0 |          0 |       0 |    0 |     0 |      0 |      0 |          0 |
+|         roundAnyRawFNToRecFN                |         RoundAnyRawFNToRecFN_ie5_is13_oe5_os11_44 |          0 |          0 |       0 |    0 |     0 |      0 |      0 |          0 |
+|     divSqrt_1                               |                         DivSqrtRecFM_small_e8_s24 |        318 |        318 |       0 |    0 |   103 |      0 |      0 |          0 |
+|       divSqrtRecFNToRaw                     |                    DivSqrtRecFMToRaw_small_e8_s24 |        315 |        315 |       0 |    0 |   103 |      0 |      0 |          0 |
+|         divSqrtRawFN                        |                         DivSqrtRawFN_small_e8_s24 |        315 |        315 |       0 |    0 |   103 |      0 |      0 |          0 |
+|       roundRawFNToRecFN                     |                       RoundRawFNToRecFN_e8_s24_41 |          3 |          3 |       0 |    0 |     0 |      0 |      0 |          0 |
+|         roundAnyRawFNToRecFN                |         RoundAnyRawFNToRecFN_ie8_is26_oe8_os24_42 |          3 |          3 |       0 |    0 |     0 |      0 |      0 |          0 |
+|     divSqrt_2                               |                        DivSqrtRecFM_small_e11_s53 |       2889 |       2889 |       0 |    0 |   194 |      0 |      0 |          0 |
+|       divSqrtRecFNToRaw                     |                   DivSqrtRecFMToRaw_small_e11_s53 |       2877 |       2877 |       0 |    0 |   194 |      0 |      0 |          0 |
+|         divSqrtRawFN                        |                        DivSqrtRawFN_small_e11_s53 |       2877 |       2877 |       0 |    0 |   194 |      0 |      0 |          0 |
+|       roundRawFNToRecFN                     |                         RoundRawFNToRecFN_e11_s53 |         12 |         12 |       0 |    0 |     0 |      0 |      0 |          0 |
+|         roundAnyRawFNToRecFN                |          RoundAnyRawFNToRecFN_ie11_is55_oe11_os53 |         12 |         12 |       0 |    0 |     0 |      0 |      0 |          0 |
+|     fpiu                                    |                                           FPToInt |       1388 |       1388 |       0 |    0 |   146 |      0 |      0 |          0 |
+|     fpmu                                    |                                            FPToFP |        567 |        567 |       0 |    0 |   208 |      0 |      0 |          0 |
+|       (fpmu)                                |                                            FPToFP |        226 |        226 |       0 |    0 |   208 |      0 |      0 |          0 |
+|       narrower                              |                                      RecFNToRecFN |        118 |        118 |       0 |    0 |     0 |      0 |      0 |          0 |
+|         roundAnyRawFNToRecFN                |           RoundAnyRawFNToRecFN_ie11_is53_oe5_os11 |        118 |        118 |       0 |    0 |     0 |      0 |      0 |          0 |
+|       narrower_1                            |                                    RecFNToRecFN_1 |        223 |        223 |       0 |    0 |     0 |      0 |      0 |          0 |
+|         roundAnyRawFNToRecFN                |           RoundAnyRawFNToRecFN_ie11_is53_oe8_os24 |        223 |        223 |       0 |    0 |     0 |      0 |      0 |          0 |
+|     hfma                                    |                                 FPUFMAPipe_l3_f16 |        440 |        440 |       0 |    0 |   127 |      0 |      0 |          1 |
+|       (hfma)                                |                                 FPUFMAPipe_l3_f16 |          3 |          3 |       0 |    0 |    57 |      0 |      0 |          0 |
+|       fma                                   |                         MulAddRecFNPipe_l2_e5_s11 |        437 |        437 |       0 |    0 |    70 |      0 |      0 |          1 |
+|         (fma)                               |                         MulAddRecFNPipe_l2_e5_s11 |        234 |        234 |       0 |    0 |    70 |      0 |      0 |          1 |
+|         mulAddRecFNToRaw_postMul            |                   MulAddRecFNToRaw_postMul_e5_s11 |         31 |         31 |       0 |    0 |     0 |      0 |      0 |          0 |
+|         mulAddRecFNToRaw_preMul             |                    MulAddRecFNToRaw_preMul_e5_s11 |        118 |        118 |       0 |    0 |     0 |      0 |      0 |          0 |
+|         roundRawFNToRecFN                   |                          RoundRawFNToRecFN_e5_s11 |         54 |         54 |       0 |    0 |     0 |      0 |      0 |          0 |
+|     ifpu                                    |                                           IntToFP |       1994 |       1994 |       0 |    0 |   148 |      0 |      0 |          0 |
+|       (ifpu)                                |                                           IntToFP |       1262 |       1262 |       0 |    0 |   148 |      0 |      0 |          0 |
+|       i2fResults_i2f_1                      |                              INToRecFN_i64_e8_s24 |        309 |        309 |       0 |    0 |     0 |      0 |      0 |          0 |
+|         roundAnyRawFNToRecFN                |            RoundAnyRawFNToRecFN_ie7_is64_oe8_os24 |        309 |        309 |       0 |    0 |     0 |      0 |      0 |          0 |
+|       i2fResults_i2f_2                      |                             INToRecFN_i64_e11_s53 |        423 |        423 |       0 |    0 |     0 |      0 |      0 |          0 |
+|         roundAnyRawFNToRecFN                |           RoundAnyRawFNToRecFN_ie7_is64_oe11_os53 |        423 |        423 |       0 |    0 |     0 |      0 |      0 |          0 |
+|     regfile_ext                             |                                     regfile_32x65 |       2988 |       2988 |       0 |    0 |  2080 |      0 |      0 |          0 |
+|     sfma                                    |                                 FPUFMAPipe_l3_f32 |        922 |        922 |       0 |    0 |   240 |      0 |      0 |          2 |
+|       (sfma)                                |                                 FPUFMAPipe_l3_f32 |          2 |          2 |       0 |    0 |    88 |      0 |      0 |          0 |
+|       fma                                   |                         MulAddRecFNPipe_l2_e8_s24 |        920 |        920 |       0 |    0 |   152 |      0 |      0 |          2 |
+|         (fma)                               |                         MulAddRecFNPipe_l2_e8_s24 |        451 |        451 |       0 |    0 |   152 |      0 |      0 |          2 |
+|         mulAddRecFNToRaw_postMul            |                   MulAddRecFNToRaw_postMul_e8_s24 |         67 |         67 |       0 |    0 |     0 |      0 |      0 |          0 |
+|         mulAddRecFNToRaw_preMul             |                    MulAddRecFNToRaw_preMul_e8_s24 |        285 |        285 |       0 |    0 |     0 |      0 |      0 |          0 |
+|         roundRawFNToRecFN                   |                          RoundRawFNToRecFN_e8_s24 |        117 |        117 |       0 |    0 |     0 |      0 |      0 |          0 |
+|   frontend                                  |                                          Frontend |       4890 |       4874 |      16 |    0 |  4315 |      0 |     40 |          0 |
+|     (frontend)                              |                                          Frontend |         19 |         19 |       0 |    0 |   131 |      0 |      0 |          0 |
+|     btb                                     |                                               BTB |       1139 |       1123 |      16 |    0 |  1472 |      0 |      0 |          0 |
+|       (btb)                                 |                                               BTB |       1076 |       1076 |       0 |    0 |  1472 |      0 |      0 |          0 |
+|       table_ext                             |                                       table_512x1 |         63 |         47 |      16 |    0 |     0 |      0 |      0 |          0 |
+|     fq                                      |                                        ShiftQueue |       1192 |       1192 |       0 |    0 |   450 |      0 |      0 |          0 |
+|     icache                                  |                                            ICache |       1495 |       1495 |       0 |    0 |   837 |      0 |     40 |          0 |
+|       (icache)                              |                                            ICache |        524 |        524 |       0 |    0 |   821 |      0 |      0 |          0 |
+|       repl_way_v0_prng                      |                            MaxPeriodFibonacciLFSR |        539 |        539 |       0 |    0 |    16 |      0 |      0 |          0 |
+|       rockettile_icache_data_arrays_0       |                   rockettile_icache_data_arrays_0 |         32 |         32 |       0 |    0 |     0 |      0 |      8 |          0 |
+|         rockettile_icache_data_arrays_0_ext |            rockettile_icache_data_arrays_0_ext_32 |         32 |         32 |       0 |    0 |     0 |      0 |      8 |          0 |
+|       rockettile_icache_data_arrays_1       |                   rockettile_icache_data_arrays_1 |          8 |          8 |       0 |    0 |     0 |      0 |      8 |          0 |
+|         rockettile_icache_data_arrays_0_ext |            rockettile_icache_data_arrays_0_ext_23 |          8 |          8 |       0 |    0 |     0 |      0 |      8 |          0 |
+|       rockettile_icache_data_arrays_2       |                   rockettile_icache_data_arrays_2 |          8 |          8 |       0 |    0 |     0 |      0 |      8 |          0 |
+|         rockettile_icache_data_arrays_0_ext |            rockettile_icache_data_arrays_0_ext_14 |          8 |          8 |       0 |    0 |     0 |      0 |      8 |          0 |
+|       rockettile_icache_data_arrays_3       |                   rockettile_icache_data_arrays_3 |        264 |        264 |       0 |    0 |     0 |      0 |      8 |          0 |
+|         rockettile_icache_data_arrays_0_ext |               rockettile_icache_data_arrays_0_ext |        264 |        264 |       0 |    0 |     0 |      0 |      8 |          0 |
+|       rockettile_icache_tag_array           |                       rockettile_icache_tag_array |        120 |        120 |       0 |    0 |     0 |      0 |      8 |          0 |
+|         rockettile_icache_tag_array_ext     |                   rockettile_icache_tag_array_ext |        120 |        120 |       0 |    0 |     0 |      0 |      8 |          0 |
+|     tlb                                     |                                              ITLB |       1046 |       1046 |       0 |    0 |  1425 |      0 |      0 |          0 |
+|   ptw                                       |                                               PTW |        578 |        578 |       0 |    0 |   541 |      0 |      0 |          0 |
+|   tlMasterXbar                              | TLXbar_MasterXbar_RocketTile_i2_o1_a32d128s2k4z4c |         44 |         44 |       0 |    0 |    11 |      0 |      0 |          0 |
++---------------------------------------------+---------------------------------------------------+------------+------------+---------+------+-------+--------+--------+------------+
+
+

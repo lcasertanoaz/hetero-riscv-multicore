@@ -1,0 +1,197 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Sun Nov 15 23:48:35 2026
+| Host         : DESKTOP-62E1DJV running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -hierarchical_depth 4 -file C:/synth/results/synth/BudgetSB1Config/utilization_hier.rpt
+| Design       : BoomTile
+| Device       : xc7a200tsbg484-1
+| Speed File   : -1
+| Design State : Synthesized
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++----------------------------+-------------------------------------------------+------------+------------+---------+------+-------+--------+--------+------------+
+|          Instance          |                      Module                     | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs  | RAMB36 | RAMB18 | DSP Blocks |
++----------------------------+-------------------------------------------------+------------+------------+---------+------+-------+--------+--------+------------+
+| BoomTile                   |                                           (top) |      66361 |      65606 |     708 |   47 | 44922 |     14 |     52 |         64 |
+|   (BoomTile)               |                                           (top) |         45 |         45 |       0 |    0 |   110 |      0 |      0 |          0 |
+|   core                     |                                        BoomCore |      39973 |      39789 |     140 |   44 | 21977 |      0 |      0 |         64 |
+|     (core)                 |                                        BoomCore |        801 |        801 |       0 |    0 |   437 |      0 |      0 |          0 |
+|     FpPipeline             |                                      FpPipeline |      14811 |      14697 |      88 |   26 |  7031 |      0 |      0 |         20 |
+|       (FpPipeline)         |                                      FpPipeline |          0 |          0 |       0 |    0 |    94 |      0 |      0 |          0 |
+|       fp_issue_unit        |                             IssueUnitCollapsing |        632 |        632 |       0 |    0 |   553 |      0 |      0 |          0 |
+|         (fp_issue_unit)    |                             IssueUnitCollapsing |          0 |          0 |       0 |    0 |     1 |      0 |      0 |          0 |
+|         slots_0            |                                       IssueSlot |        114 |        114 |       0 |    0 |    69 |      0 |      0 |          0 |
+|         slots_1            |                                   IssueSlot_143 |         54 |         54 |       0 |    0 |    69 |      0 |      0 |          0 |
+|         slots_2            |                                   IssueSlot_144 |         37 |         37 |       0 |    0 |    69 |      0 |      0 |          0 |
+|         slots_3            |                                   IssueSlot_145 |        121 |        121 |       0 |    0 |    69 |      0 |      0 |          0 |
+|         slots_4            |                                   IssueSlot_146 |         19 |         19 |       0 |    0 |    69 |      0 |      0 |          0 |
+|         slots_5            |                                   IssueSlot_147 |        184 |        184 |       0 |    0 |    69 |      0 |      0 |          0 |
+|         slots_6            |                                   IssueSlot_148 |         92 |         92 |       0 |    0 |    69 |      0 |      0 |          0 |
+|         slots_7            |                                   IssueSlot_149 |         11 |         11 |       0 |    0 |    69 |      0 |      0 |          0 |
+|       fpu_exe_unit         |                                      FPUExeUnit |      10221 |      10107 |      88 |   26 |  2929 |      0 |      0 |         20 |
+|         FDivSqrtUnit       |                                    FDivSqrtUnit |       1703 |       1703 |       0 |    0 |  1066 |      0 |      0 |          9 |
+|         FPUUnit            |                                         FPUUnit |       7960 |       7934 |       0 |   26 |  1511 |      0 |      0 |         11 |
+|         fp_sdq             |                           BranchKillableQueue_5 |        147 |        103 |      44 |    0 |   107 |      0 |      0 |          0 |
+|         queue              |                           BranchKillableQueue_4 |        411 |        367 |      44 |    0 |   245 |      0 |      0 |          0 |
+|       fregfile             |                       RegisterFileSynthesizable |       3428 |       3428 |       0 |    0 |  3173 |      0 |      0 |          0 |
+|         (fregfile)         |                       RegisterFileSynthesizable |          0 |          0 |       0 |    0 |    53 |      0 |      0 |          0 |
+|         regfile_ext        |                                   regfile_48x65 |       3428 |       3428 |       0 |    0 |  3120 |      0 |      0 |          0 |
+|       fregister_read       |                                    RegisterRead |        530 |        530 |       0 |    0 |   282 |      0 |      0 |          0 |
+|     alu_exe_unit           |                                    ALUExeUnit_1 |       8429 |       8359 |      52 |   18 |   965 |      0 |      0 |         44 |
+|       ALUUnit              |                                         ALUUnit |       5176 |       5158 |       0 |   18 |   258 |      0 |      0 |          0 |
+|         (ALUUnit)          |                                         ALUUnit |       5176 |       5158 |       0 |   18 |   258 |      0 |      0 |          0 |
+|         alu                |                                       RocketALU |          0 |          0 |       0 |    0 |     0 |      0 |      0 |          0 |
+|       DivUnit              |                                         DivUnit |       1004 |       1004 |       0 |    0 |   233 |      0 |      0 |         10 |
+|         (DivUnit)          |                                         DivUnit |          0 |          0 |       0 |    0 |    24 |      0 |      0 |          0 |
+|         div                |                                          MulDiv |       1004 |       1004 |       0 |    0 |   209 |      0 |      0 |         10 |
+|       IntToFPUnit          |                                     IntToFPUnit |       1537 |       1537 |       0 |    0 |   178 |      0 |      0 |          0 |
+|         (IntToFPUnit)      |                                     IntToFPUnit |         59 |         59 |       0 |    0 |    36 |      0 |      0 |          0 |
+|         ifpu               |                                         IntToFP |       1478 |       1478 |       0 |    0 |   142 |      0 |      0 |          0 |
+|       PipelinedMulUnit     |                                PipelinedMulUnit |        327 |        327 |       0 |    0 |   179 |      0 |      0 |         34 |
+|         (PipelinedMulUnit) |                                PipelinedMulUnit |          4 |          4 |       0 |    0 |    11 |      0 |      0 |          0 |
+|         imul               |                             PipelinedMultiplier |        323 |        323 |       0 |    0 |   168 |      0 |      0 |         34 |
+|       queue                |                           BranchKillableQueue_3 |        385 |        333 |      52 |    0 |   117 |      0 |      0 |          0 |
+|         (queue)            |                           BranchKillableQueue_3 |        207 |        207 |       0 |    0 |   117 |      0 |      0 |          0 |
+|         ram_ext            |                                        ram_5x77 |        178 |        126 |      52 |    0 |     0 |      0 |      0 |          0 |
+|     csr                    |                                         CSRFile |       1602 |       1602 |       0 |    0 |  1181 |      0 |      0 |          0 |
+|     dec_brmask_logic       |                       BranchMaskGenerationLogic |         25 |         25 |       0 |    0 |     8 |      0 |      0 |          0 |
+|     dispatcher             |                                 BasicDispatcher |          1 |          1 |       0 |    0 |     0 |      0 |      0 |          0 |
+|     fp_rename_stage        |                                   RenameStage_1 |       1523 |       1523 |       0 |    0 |  2266 |      0 |      0 |          0 |
+|       (fp_rename_stage)    |                                   RenameStage_1 |         60 |         60 |       0 |    0 |    51 |      0 |      0 |          0 |
+|       busytable            |                               RenameBusyTable_1 |         63 |         63 |       0 |    0 |    48 |      0 |      0 |          0 |
+|       freelist             |                                RenameFreeList_1 |        799 |        799 |       0 |    0 |   439 |      0 |      0 |          0 |
+|       maptable             |                                RenameMapTable_1 |        601 |        601 |       0 |    0 |  1728 |      0 |      0 |          0 |
+|     ftq_arb                |                                  Arbiter3_UInt4 |          8 |          8 |       0 |    0 |     0 |      0 |      0 |          0 |
+|     int_issue_unit         |                           IssueUnitCollapsing_2 |       1349 |       1349 |       0 |    0 |   969 |      0 |      0 |          0 |
+|       (int_issue_unit)     |                           IssueUnitCollapsing_2 |          0 |          0 |       0 |    0 |     1 |      0 |      0 |          0 |
+|       slots_0              |                                 IssueSlot_8_133 |        139 |        139 |       0 |    0 |   121 |      0 |      0 |          0 |
+|       slots_1              |                                 IssueSlot_8_134 |        100 |        100 |       0 |    0 |   121 |      0 |      0 |          0 |
+|       slots_2              |                                 IssueSlot_8_135 |         91 |         91 |       0 |    0 |   121 |      0 |      0 |          0 |
+|       slots_3              |                                 IssueSlot_8_136 |        192 |        192 |       0 |    0 |   121 |      0 |      0 |          0 |
+|       slots_4              |                                 IssueSlot_8_137 |        403 |        403 |       0 |    0 |   121 |      0 |      0 |          0 |
+|       slots_5              |                                 IssueSlot_8_138 |        178 |        178 |       0 |    0 |   121 |      0 |      0 |          0 |
+|       slots_6              |                                 IssueSlot_8_139 |        138 |        138 |       0 |    0 |   121 |      0 |      0 |          0 |
+|       slots_7              |                                 IssueSlot_8_140 |        108 |        108 |       0 |    0 |   121 |      0 |      0 |          0 |
+|     iregfile               |                     RegisterFileSynthesizable_1 |       4824 |       4824 |       0 |    0 |  3328 |      0 |      0 |          0 |
+|       (iregfile)           |                     RegisterFileSynthesizable_1 |        280 |        280 |       0 |    0 |     0 |      0 |      0 |          0 |
+|       regfile_ext          |                                   regfile_52x64 |       4544 |       4544 |       0 |    0 |  3328 |      0 |      0 |          0 |
+|     iregister_read         |                                  RegisterRead_1 |       1714 |       1714 |       0 |    0 |   701 |      0 |      0 |          0 |
+|     memExeUnit             |                                      ALUExeUnit |         10 |         10 |       0 |    0 |     0 |      0 |      0 |          0 |
+|       maddrcalc            |                                 MemAddrCalcUnit |         10 |         10 |       0 |    0 |     0 |      0 |      0 |          0 |
+|     mem_issue_unit         |                           IssueUnitCollapsing_1 |       1116 |       1116 |       0 |    0 |   697 |      0 |      0 |          0 |
+|       (mem_issue_unit)     |                           IssueUnitCollapsing_1 |          0 |          0 |       0 |    0 |     1 |      0 |      0 |          0 |
+|       slots_0              |                                     IssueSlot_8 |         27 |         27 |       0 |    0 |    87 |      0 |      0 |          0 |
+|       slots_1              |                                 IssueSlot_8_126 |        201 |        201 |       0 |    0 |    87 |      0 |      0 |          0 |
+|       slots_2              |                                 IssueSlot_8_127 |        105 |        105 |       0 |    0 |    87 |      0 |      0 |          0 |
+|       slots_3              |                                 IssueSlot_8_128 |        206 |        206 |       0 |    0 |    87 |      0 |      0 |          0 |
+|       slots_4              |                                 IssueSlot_8_129 |        120 |        120 |       0 |    0 |    87 |      0 |      0 |          0 |
+|       slots_5              |                                 IssueSlot_8_130 |        112 |        112 |       0 |    0 |    87 |      0 |      0 |          0 |
+|       slots_6              |                                 IssueSlot_8_131 |        183 |        183 |       0 |    0 |    87 |      0 |      0 |          0 |
+|       slots_7              |                                 IssueSlot_8_132 |        162 |        162 |       0 |    0 |    87 |      0 |      0 |          0 |
+|     rename_stage           |                                     RenameStage |       1773 |       1773 |       0 |    0 |  2333 |      0 |      0 |          0 |
+|       (rename_stage)       |                                     RenameStage |        179 |        179 |       0 |    0 |   132 |      0 |      0 |          0 |
+|       busytable            |                                 RenameBusyTable |         55 |         55 |       0 |    0 |    52 |      0 |      0 |          0 |
+|       freelist             |                                  RenameFreeList |        811 |        811 |       0 |    0 |   475 |      0 |      0 |          0 |
+|       maptable             |                                  RenameMapTable |        728 |        728 |       0 |    0 |  1674 |      0 |      0 |          0 |
+|     rob                    |                                             Rob |       2019 |       2019 |       0 |    0 |  2061 |      0 |      0 |          0 |
+|   dcache                   |                           BoomNonBlockingDCache |       3837 |       3681 |     156 |    0 |  2722 |      4 |      4 |          0 |
+|     (dcache)               |                           BoomNonBlockingDCache |        108 |        108 |       0 |    0 |   753 |      0 |      0 |          0 |
+|     data                   |                         BoomDuplicatedDataArray |        637 |        637 |       0 |    0 |     0 |      4 |      0 |          0 |
+|       array_0_0_0          |                                     array_0_0_0 |        402 |        402 |       0 |    0 |     0 |      1 |      0 |          0 |
+|         array_0_0_0_ext    |                             array_0_0_0_ext_124 |        402 |        402 |       0 |    0 |     0 |      1 |      0 |          0 |
+|       array_1_0_0          |                                     array_1_0_0 |        170 |        170 |       0 |    0 |     0 |      1 |      0 |          0 |
+|         array_0_0_0_ext    |                             array_0_0_0_ext_122 |        170 |        170 |       0 |    0 |     0 |      1 |      0 |          0 |
+|       array_2_0_0          |                                     array_2_0_0 |         45 |         45 |       0 |    0 |     0 |      1 |      0 |          0 |
+|         array_0_0_0_ext    |                             array_0_0_0_ext_120 |         45 |         45 |       0 |    0 |     0 |      1 |      0 |          0 |
+|       array_3_0_0          |                                     array_3_0_0 |         21 |         21 |       0 |    0 |     0 |      1 |      0 |          0 |
+|         array_0_0_0_ext    |                                 array_0_0_0_ext |         21 |         21 |       0 |    0 |     0 |      1 |      0 |          0 |
+|     lfsr_prng              |                      MaxPeriodFibonacciLFSR_113 |          5 |          5 |       0 |    0 |    16 |      0 |      0 |          0 |
+|     meta_0                 |                                 L1MetadataArray |         37 |         37 |       0 |    0 |     7 |      0 |      4 |          0 |
+|       (meta_0)             |                                 L1MetadataArray |          5 |          5 |       0 |    0 |     7 |      0 |      0 |          0 |
+|       tag_array            |                                       tag_array |         32 |         32 |       0 |    0 |     0 |      0 |      4 |          0 |
+|         tag_array_ext      |                                   tag_array_ext |         32 |         32 |       0 |    0 |     0 |      0 |      4 |          0 |
+|     mshrs                  |                                    BoomMSHRFile |       2418 |       2262 |     156 |    0 |  1332 |      0 |      0 |          0 |
+|       (mshrs)              |                                    BoomMSHRFile |         13 |         13 |       0 |    0 |    33 |      0 |      0 |          0 |
+|       lb_ext               |                                        lb_16x64 |         44 |          0 |      44 |    0 |     0 |      0 |      0 |          0 |
+|       lb_read_arb          |                      Arbiter2_LineBufferReadReq |          3 |          3 |       0 |    0 |     0 |      0 |      0 |          0 |
+|       mmios_0              |                                      BoomIOMSHR |        221 |        221 |       0 |    0 |   188 |      0 |      0 |          0 |
+|       mshrs_0              |                                        BoomMSHR |       1001 |        989 |      12 |    0 |   517 |      0 |      0 |          0 |
+|         (mshrs_0)          |                                        BoomMSHR |        407 |        407 |       0 |    0 |    92 |      0 |      0 |          0 |
+|         rpq                |                         BranchKillableQueue_115 |        594 |        582 |      12 |    0 |   425 |      0 |      0 |          0 |
+|       mshrs_1              |                                    BoomMSHR_114 |        849 |        837 |      12 |    0 |   517 |      0 |      0 |          0 |
+|         (mshrs_1)          |                                    BoomMSHR_114 |        219 |        219 |       0 |    0 |    92 |      0 |      0 |          0 |
+|         rpq                |                             BranchKillableQueue |        630 |        618 |      12 |    0 |   425 |      0 |      0 |          0 |
+|       respq                |                           BranchKillableQueue_2 |        225 |        181 |      44 |    0 |    77 |      0 |      0 |          0 |
+|         (respq)            |                           BranchKillableQueue_2 |        115 |        115 |       0 |    0 |    77 |      0 |      0 |          0 |
+|         ram_ext            |                                        ram_4x65 |        110 |         66 |      44 |    0 |     0 |      0 |      0 |          0 |
+|       sdq_ext              |                                       sdq_17x64 |         62 |         18 |      44 |    0 |     0 |      0 |      0 |          0 |
+|     prober                 |                                   BoomProbeUnit |        350 |        350 |       0 |    0 |    50 |      0 |      0 |          0 |
+|     wb                     |                               BoomWritebackUnit |        282 |        282 |       0 |    0 |   564 |      0 |      0 |          0 |
+|   frontend                 |                                    BoomFrontend |      16151 |      15736 |     412 |    3 | 15065 |      9 |     48 |          0 |
+|     (frontend)             |                                    BoomFrontend |          2 |          2 |       0 |    0 |   276 |      0 |      0 |          0 |
+|     bpd                    |                                 BranchPredictor |       8298 |       8039 |     256 |    3 |  8432 |      1 |     44 |          0 |
+|       (bpd)                |                                 BranchPredictor |          2 |          2 |       0 |    0 |    48 |      0 |      0 |          0 |
+|       banked_predictors_0  |                     ComposedBranchPredictorBank |       8296 |       8037 |     256 |    3 |  8384 |      1 |     44 |          0 |
+|         bim                |                          BIMBranchPredictorBank |        148 |        148 |       0 |    0 |    97 |      0 |      4 |          0 |
+|         btb                |                          BTBBranchPredictorBank |       1284 |       1284 |       0 |    0 |   424 |      1 |     16 |          0 |
+|         loop               |                         LoopBranchPredictorBank |       2648 |       2645 |       0 |    3 |  2739 |      0 |      0 |          0 |
+|         tage               |                         TageBranchPredictorBank |       1676 |       1420 |     256 |    0 |  1354 |      0 |     24 |          0 |
+|         ubtb               |                   FAMicroBTBBranchPredictorBank |       2560 |       2560 |       0 |    0 |  3770 |      0 |      0 |          0 |
+|     f3                     |                             Queue1_FrontendResp |       1877 |       1877 |       0 |    0 |   182 |      0 |      0 |          0 |
+|     f3_bpd_resp            |                   Queue1_BranchPredictionBundle |        162 |        162 |       0 |    0 |   286 |      0 |      0 |          0 |
+|     f4                     |                              Queue1_FetchBundle |        388 |        388 |       0 |    0 |   420 |      0 |      0 |          0 |
+|     f4_btb_corrections     |                   Queue2_BranchPredictionUpdate |        161 |          5 |     156 |    0 |     3 |      0 |      0 |          0 |
+|       (f4_btb_corrections) |                   Queue2_BranchPredictionUpdate |          2 |          2 |       0 |    0 |     3 |      0 |      0 |          0 |
+|       ram_ext              |                                       ram_2x281 |        159 |          3 |     156 |    0 |     0 |      0 |      0 |          0 |
+|     fb                     |                                     FetchBuffer |        869 |        869 |       0 |    0 |   385 |      0 |      0 |          0 |
+|     ftq                    |                                FetchTargetQueue |       2319 |       2319 |       0 |    0 |  2046 |      4 |      0 |          0 |
+|       (ftq)                |                                FetchTargetQueue |       2065 |       2065 |       0 |    0 |  2046 |      0 |      0 |          0 |
+|       ghist_0              |                                         ghist_0 |        103 |        103 |       0 |    0 |     0 |      1 |      0 |          0 |
+|         ghist_0_ext        |                                   ghist_0_ext_9 |        103 |        103 |       0 |    0 |     0 |      1 |      0 |          0 |
+|       ghist_1              |                                         ghist_1 |         90 |         90 |       0 |    0 |     0 |      1 |      0 |          0 |
+|         ghist_0_ext        |                                     ghist_0_ext |         90 |         90 |       0 |    0 |     0 |      1 |      0 |          0 |
+|       meta_0               |                                        meta_0_0 |         61 |         61 |       0 |    0 |     0 |      2 |      0 |          0 |
+|         meta_0_0_ext       |                                    meta_0_0_ext |         61 |         61 |       0 |    0 |     0 |      2 |      0 |          0 |
+|     icache                 |                                          ICache |        627 |        627 |       0 |    0 |   319 |      4 |      4 |          0 |
+|       (icache)             |                                          ICache |        102 |        102 |       0 |    0 |   303 |      0 |      0 |          0 |
+|       dataArrayWay_0       |                                  dataArrayWay_0 |          0 |          0 |       0 |    0 |     0 |      1 |      0 |          0 |
+|         dataArrayWay_0_ext |                            dataArrayWay_0_ext_7 |          0 |          0 |       0 |    0 |     0 |      1 |      0 |          0 |
+|       dataArrayWay_1       |                                  dataArrayWay_1 |          0 |          0 |       0 |    0 |     0 |      1 |      0 |          0 |
+|         dataArrayWay_0_ext |                            dataArrayWay_0_ext_5 |          0 |          0 |       0 |    0 |     0 |      1 |      0 |          0 |
+|       dataArrayWay_2       |                                  dataArrayWay_2 |        128 |        128 |       0 |    0 |     0 |      1 |      0 |          0 |
+|         dataArrayWay_0_ext |                            dataArrayWay_0_ext_3 |        128 |        128 |       0 |    0 |     0 |      1 |      0 |          0 |
+|       dataArrayWay_3       |                                  dataArrayWay_3 |         29 |         29 |       0 |    0 |     0 |      1 |      0 |          0 |
+|         dataArrayWay_0_ext |                              dataArrayWay_0_ext |         29 |         29 |       0 |    0 |     0 |      1 |      0 |          0 |
+|       repl_way_prng        |                          MaxPeriodFibonacciLFSR |        274 |        274 |       0 |    0 |    16 |      0 |      0 |          0 |
+|       tag_array            |                                     tag_array_0 |         94 |         94 |       0 |    0 |     0 |      0 |      4 |          0 |
+|         tag_array_0_ext    |                                 tag_array_0_ext |         94 |         94 |       0 |    0 |     0 |      0 |      4 |          0 |
+|     ras                    |                                         BoomRAS |        375 |        375 |       0 |    0 |  1327 |      0 |      0 |          0 |
+|     tlb                    |                                            ITLB |       1073 |       1073 |       0 |    0 |  1389 |      0 |      0 |          0 |
+|   lsu                      |                                             LSU |       3982 |       3982 |       0 |    0 |  3154 |      0 |      0 |          0 |
+|     (lsu)                  |                                             LSU |       3411 |       3411 |       0 |    0 |  2550 |      0 |      0 |          0 |
+|     dtlb                   |                                          NBDTLB |        571 |        571 |       0 |    0 |   604 |      0 |      0 |          0 |
+|   ptw                      |                                             PTW |       2175 |       2175 |       0 |    0 |  1585 |      1 |      0 |          0 |
+|     (ptw)                  |                                             PTW |       2065 |       2065 |       0 |    0 |  1585 |      0 |      0 |          0 |
+|     l2_tlb_ram_0           |                                    l2_tlb_ram_0 |        110 |        110 |       0 |    0 |     0 |      1 |      0 |          0 |
+|       l2_tlb_ram_0_ext     |                                l2_tlb_ram_0_ext |        110 |        110 |       0 |    0 |     0 |      1 |      0 |          0 |
+|         mem_0_0            |                          split_l2_tlb_ram_0_ext |        110 |        110 |       0 |    0 |     0 |      1 |      0 |          0 |
+|   tlMasterXbar             | TLXbar_MasterXbar_BoomTile_i2_o1_a32d128s3k4z4c |         45 |         45 |       0 |    0 |    12 |      0 |      0 |          0 |
+|   widget                   |                                TLWidthWidget8_6 |        149 |        149 |       0 |    0 |   226 |      0 |      0 |          0 |
+|     (widget)               |                                TLWidthWidget8_6 |         64 |         64 |       0 |    0 |   146 |      0 |      0 |          0 |
+|     repeated_repeater      |               Repeater_TLBundleD_a32d128s2k4z4c |         85 |         85 |       0 |    0 |    80 |      0 |      0 |          0 |
+|   widget_1                 |                                TLWidthWidget8_7 |         93 |         93 |       0 |    0 |    71 |      0 |      0 |          0 |
+|     (widget_1)             |                                TLWidthWidget8_7 |          0 |          0 |       0 |    0 |     1 |      0 |      0 |          0 |
+|     repeated_repeater      |               Repeater_TLBundleD_a32d128s1k4z4u |         93 |         93 |       0 |    0 |    70 |      0 |      0 |          0 |
++----------------------------+-------------------------------------------------+------------+------------+---------+------+-------+--------+--------+------------+
+
+
