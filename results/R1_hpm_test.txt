@@ -1,10 +1,14 @@
 [UART] UART0 is here (stdin/stdout).
-cycles        344519
-instret       194364
-branches      45947
-br_mispred    10087
-icache_miss   70
-dcache_miss   1771
+core          rocket (marchid 1)
+cycles        344493
+instret       194365
+ipc_x1000     564
+branches      42048
+br_mispred    9925
+icache_miss   3
+dcache_miss   1711
+br_mpki_x10   510
+dmiss_mpki_x10 88
 checksum      302075839
 hpm_test done
 - /workspace/chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.BudgetR1Config/gen-collateral/TestDriver.v:158: Verilog $finish
