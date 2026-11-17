@@ -1,0 +1,20 @@
+[UART] UART0 is here (stdin/stdout).
+HETERO begin config=BudgetSB1R2Config mix=balanced policy=speedup nharts=3
+H 0 r 1 4 2569173
+H 1 r 2 4 2232030
+H 2 b 0 4 1648179
+T 2 0 8 9 1 507700 462088 12 5 2277 ab90fa01
+T 2 0 4 5 1 615788 224308 9 4 11540 41500400
+T 2 0 6 7 1 263494 257299 22 5 361 e1643ab8
+T 2 0 6 12 1 260155 257299 13 0 137 e16637fe
+T 0 1 5 6 2 1430257 545850 6147 5 24552 a13821c0
+T 0 1 3 11 1 533696 159777 18 3 20416 d04dd765
+T 0 1 0 1 1 346681 273557 17648 7 150 f9c3d640
+T 0 1 2 3 1 257722 186716 10390 4 1535 253157d7
+T 1 2 7 8 1 583215 509494 538 5 923 fd43b5a6
+T 1 2 3 4 1 841375 159777 18 3 20259 f7101334
+T 1 2 1 2 1 464669 385068 18690 2 3 cab8e9a
+T 1 2 0 10 1 342166 265886 17889 7 161 73940927
+RUN makespan=2569173
+HETERO end status=ok
+- /workspace/chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.BudgetSB1R2Config/gen-collateral/TestDriver.v:158: Verilog $finish

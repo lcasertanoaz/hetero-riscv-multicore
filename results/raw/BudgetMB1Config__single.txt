@@ -1,0 +1,15 @@
+[UART] UART0 is here (stdin/stdout).
+HETERO begin config=BudgetMB1Config mix=single policy=none nharts=1
+HART hart=0 type=boom slot=0 ntasks=9 cycles=3449993
+TASK hart=0 type=boom slot=0 task=qsort seed=1 reps=1 cycles=333122 instret=273557 brmiss=14174 imiss=8 dmiss=182 chk=0x24c0d656dd030016
+TASK hart=0 type=boom slot=0 task=brrand seed=1 reps=1 cycles=420512 instret=385069 brmiss=15452 imiss=2 dmiss=2 chk=0x9eeae93c8c7c17c5
+TASK hart=0 type=boom slot=0 task=median seed=1 reps=1 cycles=206336 instret=186611 brmiss=5005 imiss=4 dmiss=1795 chk=0x52ebf643c8f86524
+TASK hart=0 type=boom slot=0 task=ptrchase seed=1 reps=1 cycles=566175 instret=159777 brmiss=5 imiss=1 dmiss=20450 chk=0xc8c3aee633082000
+TASK hart=0 type=boom slot=0 task=stream seed=1 reps=1 cycles=309912 instret=224308 brmiss=9 imiss=3 dmiss=9603 chk=0x4140000000000000
+TASK hart=0 type=boom slot=0 task=spmv seed=1 reps=2 cycles=705321 instret=545850 brmiss=10 imiss=4 dmiss=28432 chk=0x4137cccdf0000000
+TASK hart=0 type=boom slot=0 task=matmul seed=1 reps=1 cycles=134361 instret=257299 brmiss=20 imiss=5 dmiss=293 chk=0x9e3779b97f52ef11
+TASK hart=0 type=boom slot=0 task=crc32 seed=1 reps=1 cycles=414228 instret=509494 brmiss=9 imiss=4 dmiss=825 chk=0x9e3779ba2c5ee638
+TASK hart=0 type=boom slot=0 task=fir seed=1 reps=1 cycles=358679 instret=462088 brmiss=13 imiss=3 dmiss=2152 chk=0xc08033b26b10c9b2
+RUN makespan=3449993
+HETERO end status=ok
+- /workspace/chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.BudgetMB1Config/gen-collateral/TestDriver.v:158: Verilog $finish

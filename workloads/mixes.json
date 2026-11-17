@@ -1,0 +1,23 @@
+{
+  "_comment": "reps: repetitions per task instance. Tune so each task is roughly 200k-1M cycles on Rocket (check data/single_core.csv), then rerun gen_workloads.py. Mixes list task instances; instance i gets seed i+1.",
+  "tasks": {
+    "qsort":    {"reps": 1},
+    "brrand":   {"reps": 1},
+    "median":   {"reps": 1},
+    "ptrchase": {"reps": 1},
+    "stream":   {"reps": 1},
+    "spmv":     {"reps": 2},
+    "matmul":   {"reps": 1},
+    "crc32":    {"reps": 1},
+    "fir":      {"reps": 1}
+  },
+  "mixes": {
+    "branch":   ["qsort", "qsort", "qsort", "brrand", "brrand", "brrand",
+                 "median", "median", "median", "matmul", "crc32", "stream"],
+    "memory":   ["ptrchase", "ptrchase", "ptrchase", "stream", "stream", "stream",
+                 "spmv", "spmv", "spmv", "qsort", "matmul", "fir"],
+    "balanced": ["qsort", "brrand", "median", "ptrchase", "stream", "spmv",
+                 "matmul", "crc32", "fir", "qsort", "ptrchase", "matmul"],
+    "few":      ["fir", "matmul", "stream"]
+  }
+}

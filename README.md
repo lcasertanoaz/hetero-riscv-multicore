@@ -61,7 +61,7 @@ IPC; BOOM speedup per task. All cores run at the same clock.
 
 ```
 configs/      Chipyard configs: Rocket-only, mixes, BOOM-only (counts set from budget.py)
-workloads/    Task list and the static-assignment multicore program
+workloads/    Task kernels, multicore harness, mixes (see workloads/README.md)
 scripts/      budget.py (core mixes under a LUT budget), predict.py (completion-time prediction)
 data/         Measured single-core results (example file until real runs)
 results/      Multicore run outputs
