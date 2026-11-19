@@ -1,0 +1,49 @@
+% Tables for the paper. Paste into the Overleaf .tex where each table should go.
+% IEEE style: caption ABOVE the table, \footnotesize body, \hline rules (no extra packages).
+
+% ---------------------------------------------------------------------------
+% Table I: core area and the four designs under the budget
+% ---------------------------------------------------------------------------
+\begin{table}[t]
+\centering
+\caption{Core Area and Designs Under the 132,722-LUT Budget (Vivado, Artix-7). R = Rocket (32\,KiB L1), SB = SmallBOOM (16\,KiB L1), MB = MediumBOOM.}
+\label{tab:area}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lrrrrr}
+\hline
+\textbf{Core} & \textbf{LUTs} & \textbf{vs.\ R} & \textbf{FFs} & \textbf{BRAM} & \textbf{DSP} \\
+\hline
+Rocket     & 29,569  & 1.00$\times$ & 13,606 & 88 & 25 \\
+SmallBOOM  & 66,361  & 2.24$\times$ & 44,922 & 40 & 64 \\
+MediumBOOM & 117,628 & 3.98$\times$ & 61,863 & 40 & 64 \\
+\hline
+\textbf{Design} & \textbf{LUTs} & \textbf{Budget} & \multicolumn{3}{l}{\textbf{Cores}} \\
+\hline
+R4    & 118,276 & 89\%  & \multicolumn{3}{l}{4 R} \\
+SB1R2 & 125,499 & 95\%  & \multicolumn{3}{l}{1 SB + 2 R} \\
+SB2   & 132,722 & 100\% & \multicolumn{3}{l}{2 SB} \\
+MB1   & 117,628 & 89\%  & \multicolumn{3}{l}{1 MB} \\
+\hline
+\end{tabular}
+\end{table}
+
+% ---------------------------------------------------------------------------
+% Table II: the two static scheduling policies on SB1R2
+% ---------------------------------------------------------------------------
+\begin{table}[t]
+\centering
+\caption{Scheduling Policies on SB1R2: Measured Makespan (cycles)}
+\label{tab:policy}
+\footnotesize
+\begin{tabular}{lrrl}
+\hline
+\textbf{Mix} & \textbf{EFT} & \textbf{Speedup rule} & \textbf{Better} \\
+\hline
+branch   & 1,741,758 & \textbf{1,566,412} & speedup, 10\% \\
+memory   & \textbf{3,475,231} & 3,506,134 & EFT, 1\% \\
+balanced & \textbf{2,454,652} & 2,569,173 & EFT, 4\% \\
+few      & \textbf{690,526}   & 791,213   & EFT, 13\% \\
+\hline
+\end{tabular}
+\end{table}
