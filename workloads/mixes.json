@@ -18,6 +18,8 @@
                  "spmv", "spmv", "spmv", "qsort", "matmul", "fir"],
     "balanced": ["qsort", "brrand", "median", "ptrchase", "stream", "spmv",
                  "matmul", "crc32", "fir", "qsort", "ptrchase", "matmul"],
-    "few":      ["fir", "matmul", "stream"]
+    "few":      ["fir", "matmul", "stream"],
+    "fir2":     ["fir", "fir"],
+    "fir4":     ["fir", "fir", "fir", "fir"]
   }
 }

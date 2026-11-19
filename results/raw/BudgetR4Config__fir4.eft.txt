@@ -1,0 +1,13 @@
+[UART] UART0 is here (stdin/stdout).
+HETERO begin config=BudgetR4Config mix=fir4 policy=eft nharts=4
+H 0 r 0 1 748287
+H 1 r 1 1 749740
+H 2 r 2 1 750287
+H 3 r 3 1 750385
+T 0 0 8 1 1 747986 462090 8237 6 2039 ab90fa00
+T 1 1 8 2 1 749500 462090 8234 6 2124 1b624236
+T 2 2 8 3 1 750040 462090 8241 6 2130 5f9cd89
+T 3 3 8 4 1 750078 462090 8235 6 2122 68093053
+RUN makespan=750385
+HETERO end status=ok
+- /workspace/chipyard/sims/verilator/generated-src/chipyard.harness.TestHarness.BudgetR4Config/gen-collateral/TestDriver.v:158: Verilog $finish

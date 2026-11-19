@@ -55,7 +55,8 @@ def load_runs():
     df = pd.read_csv("results/runs.csv")
     # BudgetSB1R2Config -> SB1R2
     df["config"] = df["config"].str.replace("Budget", "").str.replace("Config", "")
-    return df
+    # only the four main mixes; crossover runs (fir2, fir4, ...) belong to fig 5
+    return df[df["mix"].isin(MIXES)]
 
 
 def grouped_bars(ax, table, colors):
